@@ -32,6 +32,32 @@
     <!------------ Header Section Start ----------->
     <!--*****************************************-->
     <header class="header__container">
+      <nav class="nav-bar">
+        <div class="logo-box">
+          <h1>Logo</h1>
+        </div>
+        <div id="ul-box" class="ul-wrapper">
+          <ul>
+            <li>
+              <a href="#bikes">Bikes</a>
+            </li>
+            <li>
+              <a href="#clients">Clients</a>
+            </li>
+            <li>
+              <a href="#questions">Questions</a>
+            </li>
+            <li>
+              <a href="#l-news">Latest-News</a>
+            </li>
+          </ul>
+        </div>
+        <div onclick="showBox()" class="burger">
+          <div class="line-1 line"></div>
+          <div class="line-2 line"></div>
+          <div class="line-3 line"></div>
+        </div>
+      </nav>
       <section class="container py-5">
         <div class="row align-items-center">
           <!--*****************************************-->
@@ -123,7 +149,7 @@
       <!--*****************************************-->
       <!-------- Featured Bike Section Start -------->
       <!--*****************************************-->
-      <section class="container my-5">
+      <section id="bikes" class="container my-5">
         <div class="featured__heading__wrapper">
           <h1 class="text-center fw-bolder feature__heading">
             Featured Bikes 2021
@@ -160,8 +186,11 @@
       <!--*****************************************-->
       <section class="container slider__highlight__container">
         <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="col-12 col-md-8 mx-auto">
+            <div
+              class="accordion accordion-flush border border-info"
+              id="accordionFlushExample"
+            >
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                   <button
@@ -215,7 +244,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 my-4">
+          <div class="col-12 col-md-8 my-4 mx-auto">
             <div
               id="carouselExampleIndicators"
               class="carousel slide"
@@ -298,11 +327,11 @@
       <!--*****************************************-->
       <!-------- Latest News Section Start ---------->
       <!--*****************************************-->
-      <section class="container latest__container">
+      <section id="l-news" class="container latest__container">
         <h1 class="latest__heading text-center fw-bolder mb-5">Latest News</h1>
         <div class="card__container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
+            <div class="col cardOne">
               <div class="card h-100 p-4 shadow border-0">
                 <img src="images/bike-1.png" class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -318,7 +347,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col cardOne">
               <div class="card h-100 p-4 shadow border-0">
                 <img src="images/bike-2.png" class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -335,7 +364,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col cardOne">
               <div class="card h-100 p-4 shadow border-0">
                 <img src="images/bike-3.png" class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -357,14 +386,14 @@
       <!--*****************************************-->
       <!-------- Happy clients Section Start -------->
       <!--*****************************************-->
-      <section class="container">
+      <section id="clients" class="container">
         <h1 class="fw-bolder clients__heading text-center my-5">
           <span>Happy</span> <span class="clients__says">Clients Says</span>
         </h1>
 
         <div class="clients__card__wrapper">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col p-4">
+            <div class="col p-4 cardOne">
               <div class="card h-100 p-4 shadow">
                 <img
                   src="images/user-1.png"
@@ -390,7 +419,7 @@
                 </div>
               </div>
             </div>
-            <div class="col p-4">
+            <div class="col p-4 cardOne">
               <div class="card h-100 p-4 shadow">
                 <img
                   src="images/user-2.png"
@@ -415,7 +444,7 @@
                 </div>
               </div>
             </div>
-            <div class="col p-4">
+            <div class="col p-4 cardOne">
               <div class="card h-100 p-4 shadow">
                 <img
                   src="images/user-3.png"
@@ -446,7 +475,7 @@
       <!--*****************************************-->
       <!-----  Frequent Question Section Start ------>
       <!--*****************************************-->
-      <section class="container frequent__container">
+      <section id="questions" class="container frequent__container">
         <h1 class="fw-bolder text-center frequent__heading">
           Frequently Asked <span class="questions">Questions</span>
         </h1>
@@ -592,5 +621,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

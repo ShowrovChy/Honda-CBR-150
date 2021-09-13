@@ -5,6 +5,107 @@
   background-color: #264653;
   margin-bottom: 120px;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-bar {
+  width: 100%;
+  min-height: 100px;
+  background-color: #264653;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul-wrapper {
+  width: 80%;
+}
+.logo-box {
+  margin-left: 100px;
+  font-size: 2.3em;
+  color: white;
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+  width: 600px;
+  margin-left: auto;
+}
+ul li {
+  display: inline-block;
+  margin: 0 0 0 35px;
+  font-size: 1.4em;
+  text-align: center;
+}
+ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+/* -------burger------- */
+.burger {
+  cursor: pointer;
+  display: none;
+}
+.line {
+  width: 30px;
+  height: 4px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: rgb(253, 253, 252);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    justify-content: space-between;
+    background-color: blueviolet;
+    position: relative;
+  }
+  .logo-box {
+    margin-left: 20px;
+    z-index: 5;
+  }
+  .burger {
+    margin-right: 20px;
+    display: block !important;
+    z-index: 5;
+  }
+  .ul-wrapper {
+    width: 100%;
+    position: absolute;
+    top: -240px;
+    transition: 0.5s ease-in-out;
+  }
+  .show {
+    transition: 0.8s ease-in-out;
+    top: 100px;
+  }
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+  }
+  ul > li {
+    margin: -2px auto;
+    padding: 15px 10px;
+    display: block;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .ul-wrapper {
+    width: 100%;
+  }
+  .logo-box {
+    margin-left: 20px;
+    z-index: 5;
+  }
+}
+/* ------------------------ */
 
 .left__para__small__text {
   color: lightgray;
@@ -73,6 +174,7 @@ hr {
 }
 .card__button:hover {
   background: #e76f51;
+  transition: 0.5s;
 }
 
 /*---------------------
@@ -109,4 +211,9 @@ footer {
 
 .copyright__text {
   color: lightgray;
+}
+
+.cardOne:hover {
+  transform: translateY(-40px);
+  transition: 0.6s;
 }
